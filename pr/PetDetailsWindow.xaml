@@ -1,0 +1,42 @@
+﻿<Window x:Class="PetManagementApp.PetDetailsWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Детали питомца" Height="551" Width="400">
+    <Grid>
+        <StackPanel Margin="10">
+            <TextBlock Text="{Binding Name}" FontWeight="Bold" FontSize="18" HorizontalAlignment="Center" Margin="0,0,0,10"/>
+
+            <Label Content="Состояние здоровья:"/>
+            <TextBox x:Name="txtHealthStatus" Width="200" Text="{Binding HealthStatus}" Margin="0,0,0,10"/>
+
+            <Label Content="Расписание кормления:"/>
+            <StackPanel>
+                <Label Content="Утро:"/>
+                <ComboBox x:Name="cmbFeedingMorningTime" Width="200" Margin="0,0,0,5">
+                    <!-- варианты времени для утра -->
+                </ComboBox>
+
+                <Label Content="День:"/>
+                <ComboBox x:Name="cmbFeedingDayTime" Width="200" Margin="0,0,0,5">
+                    <!-- варианты времени для дня -->
+                </ComboBox>
+
+                <Label Content="Вечер:"/>
+                <ComboBox x:Name="cmbFeedingEveningTime" Width="200" Margin="0,0,0,10">
+                    <!-- варианты времени для вечера -->
+                </ComboBox>
+            </StackPanel>
+
+            <Label Content="Посещение ветеринара:"/>
+            <DatePicker x:Name="dpVetAppointmentDate" Width="200" Margin="0,0,0,5"/>
+            <Label Content="Время:"/>
+            <ComboBox x:Name="cmbVetAppointmentTime" Width="200" Margin="0,0,0,10">
+            </ComboBox>
+
+            <Button Content="Сохранить изменения" Width="120" Margin="0,0,0,10" Click="SaveChanges_Click"/>
+
+            <Button Content="Сохранить" Click="SaveChanges_Click" Margin="5"/>
+            <Button Content="Назад" Click="GoBack_Click" Margin="5"/>
+        </StackPanel>
+    </Grid>
+</Window>

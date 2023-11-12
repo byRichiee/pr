@@ -1,0 +1,31 @@
+﻿<Window x:Class="PetManagementApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Приложение по управлению питомцами" Height="350" Width="500">
+    <Grid>
+        <StackPanel Margin="10">
+            <Label Content="Приложение по управлению питомцами" FontSize="20" HorizontalAlignment="Center" Margin="0,0,0,20"/>
+
+            <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
+                <Label Content="Имя:" Width="80"/>
+                <TextBox x:Name="txtName" Width="200"/>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
+                <Label Content="Вид:" Width="80"/>
+                <ComboBox x:Name="cmbBreed" Width="200">
+                    <ComboBoxItem>Кошка</ComboBoxItem>
+                    <ComboBoxItem>Собака</ComboBoxItem>
+                </ComboBox>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
+                <Label Content="Возраст:" Width="80"/>
+                <TextBox x:Name="txtAge" Width="200"/>
+            </StackPanel>
+
+            <Button Content="Добавить питомца" Width="120" Margin="0,0,0,10" Click="AddPet_Click"/>
+            <Button Content="Просмотр питомцев" Width="120" Click="ViewPets_Click"/>
+        </StackPanel>
+    </Grid>
+</Window>
